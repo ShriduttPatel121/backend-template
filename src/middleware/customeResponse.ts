@@ -6,6 +6,7 @@ declare module 'express-serve-static-core' {
         invalidPayload: (message: string, error: any) => void;
         success: (message: string, data?: any) => void;
         created: (message: string, data?: any) => void;
+        serverError: (data?: any) => void;
     }
 }
 
@@ -23,6 +24,10 @@ export const customResponses = (req: Request, res: Response, next: NextFunction)
 
     res.created = (message: string, data? : any) => {
         res.status(EStatusCodes.CREATED).json({ message, data });
+    };
+
+    res.serverError = (data?: any) => {
+        res.status(EStatusCodes.SERVER_ERROR).json({ message: 'Something went wrong', data });
     };
 
     next();
