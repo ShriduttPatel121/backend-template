@@ -68,13 +68,9 @@ To start the development server, run:
 npm start
 ```
 
-The server will start on port 3000.
-
 ### Running in Production
 
 To build and run the project for production, run:
 ```sh
 npm run production
 ```
-
-The server will start on port 3000.
