@@ -1,4 +1,4 @@
-import { Request, RequestHandler, Response } from 'express';
+import { Request, Response } from 'express';
 import { SignupSchema } from '../Types/SignupSchema';
 
 export const SignupController  = async (req: Request, res: Response) => {
