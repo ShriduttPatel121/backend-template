@@ -2,5 +2,6 @@ import { z } from 'zod';
 
 export const SignupSchema = z.object({
     email: z.string().email(),
-    password: z.string()
+    password: z.string(),
+    username: z.string().min(6)
 })
