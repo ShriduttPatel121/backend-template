@@ -22,7 +22,7 @@ export const customResponses = (req: Request, res: Response, next: NextFunction)
         res.status(EStatusCodes.SUCCESS).json({ message, data });
     };
 
-    res.created = (message: string, data? : any) => {
+    res.created = (message: string = "Resource created", data? : any) => {
         res.status(EStatusCodes.CREATED).json({ message, data });
     };
 
