@@ -35,6 +35,8 @@ src/
 - **routes/**: Defines the routes for the application.
 - **Types/**: Contains TypeScript type definitions and schemas.
 - **utils/**: Contains utility functions and constants.
+- **prisma/**: Contains the Prisma schema and client for database interactions.
+    - **prisma/schema.prisma**: Defines the database schema using Prisma's schema definition language
 
 ## Getting Started
 
@@ -57,6 +59,7 @@ src/
     ```sh
     npm install
     ```
+4. Create a `.env` file in the root directory use the `.env.example` file as a template.
 
 ### Running the Project
 
