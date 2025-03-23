@@ -13,5 +13,5 @@ app.use(customResponses);
 app.use('/api/users/', userRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log("Auth Server started at 3000!!!!");
+    console.log("Server started at 3000!!!!");
 })
