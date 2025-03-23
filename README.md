@@ -45,7 +45,7 @@ src/
 - Node.js
 - npm
 
-### Installation
+### Installation & Setup
 
 1. Clone the repository:
     ```sh
@@ -61,6 +61,15 @@ src/
     ```
 4. Create a `.env` file in the root directory use the `.env.example` file as a template.
 
+5. Run below command to generate prisma client
+    ```sh
+    npx prisma generate
+    ```
+6. Run below command to create database schema
+    ```sh
+    npx prisma migrate dev --name init
+    ```
+
 ### Running the Project
 
 To start the development server, run:
@@ -70,7 +79,7 @@ npm start
 
 ### Running in Production
 
-To build and run the project for production, run:
+To build and run the project for production, run: This will create a dist folder and run the index.js file from that folder.
 ```sh
 npm run production
 ```
