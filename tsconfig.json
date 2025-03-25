@@ -7,6 +7,10 @@
     "incremental": false,
     "isolatedModules": true,
     "lib": ["es2022", "DOM", "DOM.Iterable"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "module": "NodeNext",
     "moduleDetection": "force",
     "moduleResolution": "NodeNext",
@@ -17,6 +21,12 @@
     "target": "ES2022",
     "outDir": "./dist",                                  /* Specify an output folder for all emitted files. */
   },
-  "include": ["src/**/*"],                               /* Include all TypeScript files in the src directory */
-  "exclude": ["node_modules", "dist"]                    /* Exclude node_modules and dist directories */
+  "include": [
+    "src/**/*",
+    "src/Types/express.d.ts"
+    ],                               /* Include all TypeScript files in the src directory */
+  "exclude": ["node_modules", "dist"],                    /* Exclude node_modules and dist directories */
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
 }
