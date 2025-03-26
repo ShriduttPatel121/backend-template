@@ -8,7 +8,6 @@ export const singUpValidator = (req: Request, res: Response, next: NextFunction)
 
     if(!success) {
         return res.invalidPayload("Invalid payload", error);
-       
     }
     
     next();
