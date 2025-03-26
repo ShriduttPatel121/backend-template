@@ -6,12 +6,11 @@ import prisma from "@db";
 
 export const SignupController  = async (req: Request, res: Response) => {
     const body = req.body as (z.infer<typeof SignupSchema>);
-    
     const user = await prisma.user.create({
         data: {
             email: body.email,
             username: body.username,
-            password: hashSync(body.password, genSaltSync(10))
+            password: hashSync(body.password, genSaltSync(parseInt(process.env.SALT_ROUNDS || '10')))
         },
         omit: {
             password: false
