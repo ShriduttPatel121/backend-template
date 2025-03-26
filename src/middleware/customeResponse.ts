@@ -7,6 +7,7 @@ declare module 'express-serve-static-core' {
         success: (message: string, data?: any) => void;
         created: (message: string, data?: any) => void;
         serverError: (data?: any) => void;
+        unauthorized: (message: string, data?: any) => void;
     }
 }
 
@@ -18,11 +19,15 @@ export const customResponses = (req: Request, res: Response, next: NextFunction)
         });
     };
 
-    res.success = (message: string = "SUCCESS", data?: any) => {
+    res.unauthorized = () => {
+        res.status(EStatusCodes.UNAUTHORIZED).json({ message: 'Unauthorized' });
+    }
+
+    res.success = (message: string = "Success", data?: any) => {
         res.status(EStatusCodes.SUCCESS).json({ message, data });
     };
 
-    res.created = (message: string, data? : any) => {
+    res.created = (message: string = "Resource created", data? : any) => {
         res.status(EStatusCodes.CREATED).json({ message, data });
     };
 
