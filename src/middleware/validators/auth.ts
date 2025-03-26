@@ -7,7 +7,8 @@ export const singUpValidator = (req: Request, res: Response, next: NextFunction)
     const {error, success} = SignupSchema.safeParse(req.body);
 
     if(!success) {
-        res.invalidPayload("Invalid payload", error);
+        return res.invalidPayload("Invalid payload", error);
+       
     }
     
     next();

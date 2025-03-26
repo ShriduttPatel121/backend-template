@@ -9,7 +9,8 @@
     "lib": ["es2022", "DOM", "DOM.Iterable"],
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@db": ["prisma/db"],
     },
     "module": "NodeNext",
     "moduleDetection": "force",
@@ -21,10 +22,7 @@
     "target": "ES2022",
     "outDir": "./dist",                                  /* Specify an output folder for all emitted files. */
   },
-  "include": [
-    "src/**/*",
-    "src/Types/express.d.ts"
-    ],                               /* Include all TypeScript files in the src directory */
+  "include": ["src/**/*"],                               /* Include all TypeScript files in the src directory */
   "exclude": ["node_modules", "dist"],                    /* Exclude node_modules and dist directories */
   "ts-node": {
     "require": ["tsconfig-paths/register"]
