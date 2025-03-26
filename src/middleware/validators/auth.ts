@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { SignupSchema } from '../../Types/auth/SignupSchema';
+import { SignupSchema } from '@/Types/auth/SignupSchema';
 
 
 

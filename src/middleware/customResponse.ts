@@ -1,5 +1,5 @@
 import { Response, NextFunction, Request } from 'express';
-import { EStatusCodes } from '../utils/StatusCodes';
+import { EStatusCodes } from '@/utils/StatusCodes';
 
 declare module 'express-serve-static-core' {
     interface Response {

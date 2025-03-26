@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { genSaltSync, hashSync } from 'bcrypt'
-import { SignupSchema } from '../../Types/auth/SignupSchema';
+import { SignupSchema } from '@/Types/auth/SignupSchema';
 import z from 'zod';
 import prisma from "@db";
 
