@@ -11,7 +11,7 @@ const app = express();
 
 app.use(json());
 app.use(customResponses);
-app.use('/api/users/', router);
+app.use('/api', router);
 
 app.use(errorHandler);
 
