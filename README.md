@@ -60,6 +60,10 @@ src/
     npm install
     ```
 4. Create a `.env` file in the root directory use the `.env.example` file as a template.
+5. run migrations to sync the schema
+    ```sh
+    npx prisma migrate dev
+    ```
 
 ### Running the Project
 
