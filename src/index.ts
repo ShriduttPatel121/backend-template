@@ -1,7 +1,7 @@
 import express from 'express';
 import { json } from 'body-parser';
 import router from '@/routes';
-import { customResponses } from './middleware/customeResponse';
+import { customResponses } from '@/middleware/customeResponse';
 import dotenv from 'dotenv';
 
 import { errorHandler } from '@/middleware/errorHandler';

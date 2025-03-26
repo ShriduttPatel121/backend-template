@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { SignupSchema } from '../../Types/auth/SignupSchema';
+import { SignupSchema } from '@/Types/auth/SignupSchema';
 import z from 'zod';
 
 export const SignupController  = async (req: Request, res: Response) => {
